@@ -64,9 +64,18 @@ function getCityWeather(event) {
             uvIndex.textContent = "UV Index:";
             console.log(windSpeed);
         })
+
+    // LocalStorage Setup to call searched cities 
+    var city = [];
+    var citySearch = document.querySelector('.city');
+    console.log(citySearch);
+    console.log(city);
+    localStorage.setItem("city", JSON.stringify(citySearch));
+
+
 };
 
-// LocalStorage Setup
+
 
 
 searchEl.addEventListener("click", getCityWeather);
